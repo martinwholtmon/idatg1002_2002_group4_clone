@@ -11,10 +11,10 @@ import java.io.IOException;
 public class GUI extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
-        BorderPane root = FXMLLoader.load(getClass().getResource("/edu.group4/fxml/main.fxml"));
+        BorderPane root = FXMLLoader.load(getClass().getResource("/fxml/main.fxml"));
 
         Scene scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("/edu.group4/style/main.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/style/main.css").toExternalForm());
         primaryStage.setTitle("MetaImage");
         primaryStage.setScene(scene);
         primaryStage.show();
