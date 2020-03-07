@@ -1,30 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <top>
-      <HBox prefHeight="75.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="btnMetaImage" mnemonicParsing="false" text="MetaImage"/>
-            <Button fx:id="btnImport" mnemonicParsing="false" text="Import"/>
-            <Button fx:id="btnSearch" mnemonicParsing="false" text="Search"/>
-            <Button fx:id="btnCreate" mnemonicParsing="false" text="Create"/>
-         </children>
-      </HBox>
-   </top>
-   <left>
-      <AnchorPane fx:id="featurePane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
-   </left>
-   <right>
-      <AnchorPane fx:id="imageInfoPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
-   </right>
-   <center>
-      <ScrollPane fx:id="imageViewPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
-   </center>
-</BorderPane>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="226.0"
+      prefWidth="194.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="edu.group4.controllers.MetaImageController">
+   <children>
+      <Text layoutX="45.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meta Image"
+            textAlignment="CENTER" wrappingWidth="103.486328125"/>
+   </children>
+</Pane>
