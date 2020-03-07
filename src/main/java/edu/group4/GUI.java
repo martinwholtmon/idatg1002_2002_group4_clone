@@ -1,17 +1,20 @@
-package com.ntnu.idatg2001group4;
+package edu.group4;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class GUI extends Application {
     @Override
-    public void start(Stage primaryStage) {
-        BorderPane root = new BorderPane();
+    public void start(Stage primaryStage) throws IOException {
+        BorderPane root = FXMLLoader.load(getClass().getResource("/edu.group4/fxml/metaimage.fxml"));
 
-        Scene scene = new Scene(root, 900, 600);
 
+        Scene scene = new Scene(root);
         primaryStage.setTitle("MetaImage");
         primaryStage.setScene(scene);
         primaryStage.show();

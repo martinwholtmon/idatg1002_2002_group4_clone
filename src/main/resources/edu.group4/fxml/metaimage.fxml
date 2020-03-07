@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox prefHeight="75.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" text="Button"/>
+            <Button mnemonicParsing="false" text="Button"/>
+            <Button mnemonicParsing="false" text="Button"/>
+            <Button mnemonicParsing="false" text="Button"/>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <AnchorPane fx:id="featurePane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
+   </left>
+   <right>
+      <AnchorPane fx:id="imageInfoPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
+   </right>
+   <center>
+      <ScrollPane fx:id="imageViewPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
+   </center>
+</BorderPane>
