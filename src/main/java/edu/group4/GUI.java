@@ -14,7 +14,7 @@ public class GUI extends Application {
         BorderPane root = FXMLLoader.load(getClass().getResource("/edu.group4/fxml/main.fxml"));
 
         Scene scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("/edu.group4/style/MetaImage.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/edu.group4/style/main.css").toExternalForm());
         primaryStage.setTitle("MetaImage");
         primaryStage.setScene(scene);
         primaryStage.show();

@@ -34,8 +34,29 @@ public class MainController {
     private ScrollPane imageViewPane;
 
     @FXML
+    void openFeatureCreate(ActionEvent event) throws IOException {
+        Pane newPane = FXMLLoader.load(getClass().getResource("/edu.group4/fxml/features/create.fxml"));
+        featurePane.getChildren().clear();
+        featurePane.getChildren().add(newPane);
+    }
+
+    @FXML
+    void openFeatureImport(ActionEvent event) throws IOException {
+        Pane newPane = FXMLLoader.load(getClass().getResource("/edu.group4/fxml/features/import.fxml"));
+        featurePane.getChildren().clear();
+        featurePane.getChildren().add(newPane);
+    }
+
+    @FXML
     void openFeatureMetaImage(ActionEvent event) throws IOException {
-        Pane newPane = FXMLLoader.load(getClass().getResource("/edu.group4/fxml/metaImage.fxml"));
+        Pane newPane = FXMLLoader.load(getClass().getResource("/edu.group4/fxml/features/metaImage.fxml"));
+        featurePane.getChildren().clear();
+        featurePane.getChildren().add(newPane);
+    }
+
+    @FXML
+    void openFeatureSearch(ActionEvent event) throws IOException {
+        Pane newPane = FXMLLoader.load(getClass().getResource("/edu.group4/fxml/features/search.fxml"));
         featurePane.getChildren().clear();
         featurePane.getChildren().add(newPane);
     }

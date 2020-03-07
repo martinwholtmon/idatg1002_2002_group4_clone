@@ -13,9 +13,9 @@
       <HBox prefHeight="75.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="btnMetaImage" mnemonicParsing="false" onAction="#openFeatureMetaImage" text="MetaImage"/>
-            <Button fx:id="btnImport" mnemonicParsing="false" text="Import"/>
-            <Button fx:id="btnSearch" mnemonicParsing="false" text="Search"/>
-            <Button fx:id="btnCreate" mnemonicParsing="false" text="Create"/>
+            <Button fx:id="btnImport" mnemonicParsing="false" onAction="#openFeatureImport" text="Import"/>
+            <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#openFeatureSearch" text="Search"/>
+            <Button fx:id="btnCreate" mnemonicParsing="false" onAction="#openFeatureCreate" text="Create"/>
          </children>
       </HBox>
    </top>
