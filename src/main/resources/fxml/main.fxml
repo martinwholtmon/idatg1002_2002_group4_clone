@@ -1,31 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="edu.group4.controllers.MainController">
-   <top>
-      <HBox prefHeight="75.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0"
+      prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="edu.group4.controllers.MainController">
+   <children>
+      <HBox fx:id="featureMenu" alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="900.0">
          <children>
-            <Button fx:id="btnMetaImage" mnemonicParsing="false" onAction="#openFeatureMetaImage" text="MetaImage"/>
-            <Button fx:id="btnImport" mnemonicParsing="false" onAction="#openFeatureImport" text="Import"/>
-            <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#openFeatureSearch" text="Search"/>
-            <Button fx:id="btnCreate" mnemonicParsing="false" onAction="#openFeatureCreate" text="Create"/>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="MetaImage" textAlignment="CENTER"
+                    HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="15.0"/>
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Import" textAlignment="CENTER"
+                    HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="15.0"/>
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Create" textAlignment="CENTER"
+                    HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="15.0"/>
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Search" textAlignment="CENTER"
+                    HBox.hgrow="ALWAYS">
+               <font>
+                  <Font size="15.0"/>
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="5.0" right="5.0"/>
+         </padding>
+      </HBox>
+      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <children>
+            <Pane maxWidth="300.0" minWidth="150.0" prefHeight="200.0" prefWidth="175.0"
+                  style="-fx-border-color: blACK;" HBox.hgrow="ALWAYS"/>
+            <ScrollPane minWidth="50.0" prefHeight="200.0" prefWidth="550.0" HBox.hgrow="ALWAYS"/>
+            <Pane maxWidth="300.0" minWidth="150.0" prefHeight="200.0" prefWidth="175.0"
+                  style="-fx-border-color: blACK;" HBox.hgrow="ALWAYS"/>
          </children>
       </HBox>
-   </top>
-   <left>
-      <AnchorPane fx:id="featurePane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
-   </left>
-   <right>
-      <AnchorPane fx:id="imageInfoPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
-   </right>
-   <center>
-      <ScrollPane fx:id="imageViewPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER"/>
-   </center>
-</BorderPane>
+   </children>
+</VBox>

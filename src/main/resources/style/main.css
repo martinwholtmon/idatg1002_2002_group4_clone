@@ -1,3 +1,15 @@
 .root {
     -fx-background-color: white;
 }
+
+#featureMenu .button {
+    -fx-background-color: grey;
+}
+
+#featureMenu .button:hover {
+    -fx-background-color: lightblue;
+}
+
+#featureMenu .button:focused {
+    -fx-background-color: green;
+}
