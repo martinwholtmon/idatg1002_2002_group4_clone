@@ -14,26 +14,26 @@
    <children>
       <HBox fx:id="featureMenu" alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="900.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="MetaImage" textAlignment="CENTER"
-                    HBox.hgrow="ALWAYS">
+            <Button mnemonicParsing="false" onAction="#openTabMetaImage" prefHeight="35.0" prefWidth="100.0"
+                    text="MetaImage" textAlignment="CENTER" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="15.0"/>
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Import" textAlignment="CENTER"
-                    HBox.hgrow="ALWAYS">
+            <Button mnemonicParsing="false" onAction="#openTabImport" prefHeight="35.0" prefWidth="100.0" text="Import"
+                    textAlignment="CENTER" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="15.0"/>
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Create" textAlignment="CENTER"
-                    HBox.hgrow="ALWAYS">
+            <Button mnemonicParsing="false" onAction="#openTabCreate" prefHeight="35.0" prefWidth="100.0" text="Create"
+                    textAlignment="CENTER" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="15.0"/>
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Search" textAlignment="CENTER"
-                    HBox.hgrow="ALWAYS">
+            <Button mnemonicParsing="false" onAction="#openTabSearch" prefHeight="35.0" prefWidth="100.0" text="Search"
+                    textAlignment="CENTER" HBox.hgrow="ALWAYS">
                <font>
                   <Font size="15.0"/>
                </font>
@@ -45,10 +45,10 @@
       </HBox>
       <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
          <children>
-            <Pane maxWidth="300.0" minWidth="150.0" prefHeight="200.0" prefWidth="175.0"
+            <Pane fx:id="featurePane" maxWidth="300.0" minWidth="175.0" prefHeight="200.0" prefWidth="200.0"
                   style="-fx-border-color: blACK;" HBox.hgrow="ALWAYS"/>
-            <ScrollPane minWidth="50.0" prefHeight="200.0" prefWidth="550.0" HBox.hgrow="ALWAYS"/>
-            <Pane maxWidth="300.0" minWidth="150.0" prefHeight="200.0" prefWidth="175.0"
+            <ScrollPane fx:id="imageViewPane" minWidth="50.0" prefHeight="200.0" prefWidth="500.0" HBox.hgrow="ALWAYS"/>
+            <Pane fx:id="imageDetailPane" maxWidth="300.0" minWidth="175.0" prefHeight="200.0" prefWidth="200.0"
                   style="-fx-border-color: blACK;" HBox.hgrow="ALWAYS"/>
          </children>
       </HBox>
