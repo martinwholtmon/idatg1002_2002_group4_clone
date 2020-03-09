@@ -1,7 +1,7 @@
 .root {
     -fx-background-color: white;
-    -fx-pref-width: 900;
-    -fx-pref-height: 600;
+    -fx-pref-width: 800;
+    -fx-pref-height: 500;
     -fx-fill-height: true;
 }
 
@@ -9,6 +9,7 @@
     -fx-pref-width: 900;
     -fx-pref-height: 42;
     -fx-min-height: 42;
+    -fx-alignment: center-left;
 }
 
 #applicationBody {
@@ -37,6 +38,7 @@
 
 .button {
     -fx-background-color: grey;
+    -fx-font-size: 16px;
 }
 
 #menuBar .button:hover {
