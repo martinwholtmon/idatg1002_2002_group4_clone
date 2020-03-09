@@ -1,6 +1,6 @@
 package edu.group4;
 
-import edu.group4.GUI.FeaturePaneHandler;
+import edu.group4.gui.FeaturePaneHandler;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 

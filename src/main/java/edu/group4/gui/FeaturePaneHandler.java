@@ -1,4 +1,4 @@
-package edu.group4.GUI;
+package edu.group4.gui;
 
 import javafx.scene.layout.Pane;
 

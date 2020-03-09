@@ -1,8 +1,8 @@
 package edu.group4;
 
-import edu.group4.GUI.FeaturePaneHandler;
-import edu.group4.GUI.ImageDetailPaneHandler;
-import edu.group4.GUI.ImageViewPaneHandler;
+import edu.group4.gui.FeaturePaneHandler;
+import edu.group4.gui.ImageDetailPaneHandler;
+import edu.group4.gui.ImageViewPaneHandler;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
