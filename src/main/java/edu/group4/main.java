@@ -9,19 +9,19 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class GUI extends Application {
-    FeatureMenuBar featureMenuBar;
+public class main extends Application {
+    FMenuBar fMenuBar;
     ApplicationBody applicationBody;
 
     @Override
     public void start(Stage primaryStage) throws IOException {
         //initialize Objects
-        featureMenuBar = new FeatureMenuBar();
+        fMenuBar = new FMenuBar();
         applicationBody = new ApplicationBody();
 
         //Create panes for main
         VBox root = new VBox();
-        HBox menuBar = featureMenuBar.createMenuBar();
+        HBox menuBar = fMenuBar.createMenuBar();
         HBox appBody = applicationBody.createAppBody();
 
         //Set id for panes
