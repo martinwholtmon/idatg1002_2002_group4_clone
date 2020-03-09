@@ -61,6 +61,8 @@ public class GUI extends Application {
         //Display primaryStage
         primaryStage.setTitle("MetaImage");
         primaryStage.setScene(scene);
+        primaryStage.setMinWidth(500);
+        primaryStage.setMinHeight(300);
         primaryStage.show();
     }
 
