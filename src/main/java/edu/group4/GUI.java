@@ -16,9 +16,19 @@ public class GUI extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         //Create panes for main
-        Pane root = new VBox();
+        VBox root = new VBox();
+        Scene scene = new Scene(root);
         HBox menuBar = new HBox();
         HBox applicationBody = new HBox();
+
+        //Add stylesheet
+        scene.getStylesheets().add(getClass().getResource("/style/main.css").toExternalForm());
+
+        //Set id for css
+        root.setId("root");
+        menuBar.setId("menuBar");
+        applicationBody.setId("applicationBody");
+
 
         //Menubar children
         Button btnMenuMetaImage = new Button("MetaImage");
@@ -31,32 +41,24 @@ public class GUI extends Application {
         ScrollPane imageViewPane = new ScrollPane();
         Pane imageDetailPane = new Pane();
 
+        //Set id for css
+        featurePane.setId("featurePane");
+        imageViewPane.setId("imageViewPane");
+        imageDetailPane.setId("imageDetailPane");
+
         //Add panes and buttons to parent
         menuBar.getChildren().addAll(btnMenuMetaImage, btnMenuImport, btnMenuCreate, btnMenuSearch);
         applicationBody.getChildren().addAll(featurePane, imageViewPane, imageDetailPane);
         root.getChildren().addAll(menuBar, applicationBody);
 
-        //Default Pane/Scene properties
-        root.prefWidth(900);
-        root.prefHeight(500);
-        menuBar.setPrefWidth(900);
-        menuBar.setPrefHeight(42);
+        //Make panels resize
+        root.setVgrow(applicationBody, Priority.ALWAYS);
         applicationBody.setHgrow(featurePane, Priority.ALWAYS);
         applicationBody.setHgrow(imageViewPane, Priority.ALWAYS);
         applicationBody.setHgrow(imageDetailPane, Priority.ALWAYS);
-        featurePane.setPrefWidth(200);
-        featurePane.setMinWidth(175);
-        featurePane.setMaxWidth(300);
-        imageViewPane.setPrefWidth(500);
-        imageViewPane.setMinWidth(50);
-        imageDetailPane.setPrefWidth(200);
-        imageDetailPane.setMinWidth(175);
-        imageDetailPane.setMaxWidth(300);
-        //TODO: Make applicationBody scale vertically when its resized.
 
-        //Set scene and stylesheet - Display primaryStage
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("/style/main.css").toExternalForm());
+
+        //Display primaryStage
         primaryStage.setTitle("MetaImage");
         primaryStage.setScene(scene);
         primaryStage.show();

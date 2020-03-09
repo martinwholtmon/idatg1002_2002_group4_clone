@@ -1,15 +1,48 @@
 .root {
     -fx-background-color: white;
+    -fx-pref-width: 900;
+    -fx-pref-height: 500;
+    -fx-fill-height: true;
 }
 
-#featureMenu .button {
+#menuBar {
+    -fx-pref-width: 900;
+    -fx-pref-height: 42;
+    -fx-min-height: 42;
+}
+
+#applicationBody {
+    -fx-alignment: center;
+    -fx-fill-height: true;
+}
+
+#featurePane {
+    -fx-pref-width: 200;
+    -fx-min-width: 175;
+    -fx-max-width: 300;
+    -fx-border-color: lightgray;
+}
+
+#imageViewPane {
+    -fx-pref-width: 500;
+    -fx-min-width: 50;
+}
+
+#imageDetailPane {
+    -fx-pref-width: 200;
+    -fx-min-width: 175;
+    -fx-max-width: 300;
+    -fx-border-color: lightgray;
+}
+
+.button {
     -fx-background-color: grey;
 }
 
-#featureMenu .button:hover {
+#menuBar .button:hover {
     -fx-background-color: lightblue;
 }
 
-#featureMenu .button:focused {
+#menuBar .button:focused {
     -fx-background-color: green;
 }
