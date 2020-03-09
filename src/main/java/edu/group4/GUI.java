@@ -52,7 +52,7 @@ public class GUI extends Application {
         imageDetailPane.setPrefWidth(200);
         imageDetailPane.setMinWidth(175);
         imageDetailPane.setMaxWidth(300);
-        //TODO: Make applicationBody scale vertically when its resized. 
+        //TODO: Make applicationBody scale vertically when its resized.
 
         //Set scene and stylesheet - Display primaryStage
         Scene scene = new Scene(root);
