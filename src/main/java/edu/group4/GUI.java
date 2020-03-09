@@ -6,6 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -27,13 +28,31 @@ public class GUI extends Application {
 
         //ApplicationBody children
         Pane featurePane = new Pane();
-        ScrollPane ImageViewPane = new ScrollPane();
+        ScrollPane imageViewPane = new ScrollPane();
         Pane imageDetailPane = new Pane();
 
         //Add panes and buttons to parent
         menuBar.getChildren().addAll(btnMenuMetaImage, btnMenuImport, btnMenuCreate, btnMenuSearch);
-        applicationBody.getChildren().addAll(featurePane, ImageViewPane, imageDetailPane);
+        applicationBody.getChildren().addAll(featurePane, imageViewPane, imageDetailPane);
         root.getChildren().addAll(menuBar, applicationBody);
+
+        //Default Pane/Scene properties
+        root.prefWidth(900);
+        root.prefHeight(500);
+        menuBar.setPrefWidth(900);
+        menuBar.setPrefHeight(42);
+        applicationBody.setHgrow(featurePane, Priority.ALWAYS);
+        applicationBody.setHgrow(imageViewPane, Priority.ALWAYS);
+        applicationBody.setHgrow(imageDetailPane, Priority.ALWAYS);
+        featurePane.setPrefWidth(200);
+        featurePane.setMinWidth(175);
+        featurePane.setMaxWidth(300);
+        imageViewPane.setPrefWidth(500);
+        imageViewPane.setMinWidth(50);
+        imageDetailPane.setPrefWidth(200);
+        imageDetailPane.setMinWidth(175);
+        imageDetailPane.setMaxWidth(300);
+        //TODO: Make applicationBody scale vertically when its resized. 
 
         //Set scene and stylesheet - Display primaryStage
         Scene scene = new Scene(root);
