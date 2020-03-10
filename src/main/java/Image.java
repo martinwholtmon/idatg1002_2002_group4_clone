@@ -3,14 +3,17 @@ public class Image {
     private double date;
     private double filesize;
     private int dimensions;
+    private String location;
 
 
-    public Image (String filename, double date, double filesize, int dimensions)
+
+    public Image (String filename, double date, double filesize, int dimensions, String location)
     {
         this.filename= filename;
         this.date=date;
         this.filesize=filesize;
         this.dimensions= dimensions;
+        this.location=location;
     }
 
 
@@ -45,6 +48,13 @@ public class Image {
     public void setDimensions(int dimensions) {
         this.dimensions = dimensions;
     }
+
+    public String getLocation()
+    {
+        return location;
+    }
+
+
 
 
 }
