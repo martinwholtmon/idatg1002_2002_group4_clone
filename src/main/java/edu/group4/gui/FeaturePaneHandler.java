@@ -5,10 +5,13 @@ import javafx.scene.layout.Pane;
 public class FeaturePaneHandler {
     private Pane featurePane;
 
-    public Pane createFeaturePane() {
-        featurePane = new Pane();
-        featurePane.setId("featurePane");
-        loadMetaImage();    //load first tab when initializing
+    public FeaturePaneHandler() {
+        this.featurePane = new Pane();
+        this.featurePane.setId("featurePane");
+        loadMetaImage();
+    }
+
+    public Pane getPane() {
         return featurePane;
     }
 

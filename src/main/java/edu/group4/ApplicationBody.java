@@ -12,19 +12,21 @@ public class ApplicationBody {
     private FeaturePaneHandler featurePaneHandler;
     private ImageViewPaneHandler imageViewPaneHandler;
     private ImageDetailPaneHandler imageDetailPaneHandler;
+    HBox applicationBody;
+
+    public ApplicationBody() {
+        this.featurePaneHandler = new FeaturePaneHandler();
+        this.imageViewPaneHandler = new ImageViewPaneHandler();
+        this.imageDetailPaneHandler = new ImageDetailPaneHandler();
+        this.applicationBody = new HBox();
+        this.applicationBody.setId("applicationBody");
+    }
 
     public HBox createAppBody() {
-        featurePaneHandler = new FeaturePaneHandler();
-        imageViewPaneHandler = new ImageViewPaneHandler();
-        imageDetailPaneHandler = new ImageDetailPaneHandler();
-
-        HBox applicationBody = new HBox();
-        applicationBody.setId("applicationBody");
-
         //ApplicationBody children
-        Pane featurePane = featurePaneHandler.createFeaturePane();
-        ScrollPane imageViewPane = imageViewPaneHandler.createImageViewPane();
-        Pane imageDetailPane = imageDetailPaneHandler.createImageDetailPane();
+        Pane featurePane = featurePaneHandler.getPane();
+        ScrollPane imageViewPane = imageViewPaneHandler.getPane();
+        Pane imageDetailPane = imageDetailPaneHandler.getPane();
 
         //Make body scalable
         applicationBody.setHgrow(featurePane, Priority.ALWAYS);

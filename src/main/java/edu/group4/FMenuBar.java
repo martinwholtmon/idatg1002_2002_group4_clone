@@ -5,13 +5,17 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 
 public class FMenuBar {
-    FeaturePaneHandler featurePaneHandler;
+    private FeaturePaneHandler featurePaneHandler;
+    private HBox menuBar;
 
-    public HBox createMenuBar() {
+    public FMenuBar() {
         featurePaneHandler = new FeaturePaneHandler();
-        HBox menuBar = new HBox();
+        this.menuBar = new HBox();
         menuBar.setId("menuBar");
 
+    }
+
+    public HBox createMenuBar() {
         //Menubar children
         Button btnMenuMetaImage = new Button("MetaImage");
         Button btnMenuImport = new Button("Import");
