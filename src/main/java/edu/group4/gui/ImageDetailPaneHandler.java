@@ -5,9 +5,11 @@ import javafx.scene.layout.Pane;
 public class ImageDetailPaneHandler {
     private Pane imageDetailPane;
 
-    public Pane createImageDetailPane() {
-        imageDetailPane = new Pane();
-        imageDetailPane.setId("imageDetailPane");
-        return imageDetailPane;
+    public ImageDetailPaneHandler() {
+        this.imageDetailPane = new Pane();
+    }
+
+    public Pane getPane() {
+        return this.imageDetailPane;
     }
 }
