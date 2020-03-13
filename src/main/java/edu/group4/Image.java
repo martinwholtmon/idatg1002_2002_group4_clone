@@ -1,3 +1,5 @@
+package edu.group4;
+
 public class Image {
     private String filename;
     private double date;
