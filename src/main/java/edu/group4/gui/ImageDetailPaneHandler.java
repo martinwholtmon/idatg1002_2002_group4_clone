@@ -7,6 +7,7 @@ public class ImageDetailPaneHandler {
 
     public ImageDetailPaneHandler() {
         this.imageDetailPane = new Pane();
+        this.imageDetailPane.setId("imageDetailPane");
     }
 
     public Pane getPane() {
