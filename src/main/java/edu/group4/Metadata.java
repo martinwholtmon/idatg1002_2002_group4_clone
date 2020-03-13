@@ -20,6 +20,8 @@ public class Metadata
         }
     }
 
+        //Hei på deg
+
     void readAndDisplayMetadata(String fileName)
     {
         try
